@@ -15,10 +15,15 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/public/index.html"));
 })
 
+app.get("/notes", function(req, res){
+  res.sendFile(path.join(__dirname, "/public/notes.html"));
+})
+
 app.get("/api/notes", function (req, res) {
-  // res.sendFile(path.join(__dirname, "/public/notes.html"));
-  res.send(readNotes());
-  
+  fs.readFile("./db/db.json", "utf-8", function (err, data) {
+    if (err) throw err;
+    res.send(JSON.parse(data));
+  })
 })
 
 app.post("/api/notes", function (req, res) {
@@ -36,44 +41,10 @@ app.post("/api/notes", function (req, res) {
 });
 
 
-
-
-
-
-
-
-
-function readNotes (req, res) {
-var notes = "";
-  fs.readFile("./db/db.json", "utf-8", function (err, data) {
-    if (err) throw err;
-    console.log("line 50 " + data + " line 50")
-    notes = JSON.parse(data);
-  })
-  return notes;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.use(function (req, res, next) {
   res.status(404).send("<h2>The page you're looking for is unavailable. Please check if the address is correct and try again. Good luck!</h2>");
 })
 
 app.listen(PORT, function () {
-  console.log("App listening on PORT " + PORT);
+  console.log("App listening on http://localhost:" + PORT);
 });
