@@ -1,5 +1,11 @@
 # week11-assignment Express Homework: Note Taker
 
+Github Repo link:
+ https://github.com/sevenspell/week11-assignment
+
+ Heroku Deployed App link:
+ https://sevenspellnotetaker.herokuapp.com/
+
 ## Description 
 
 This project is to create an app that allows users to create notes and save them which will then save their entries into a database file behind the scene. Every note created will be displayed on the left of the page, for users to retrieve and review. 
@@ -27,5 +33,5 @@ https://github.com/sevenspell/week11-assignment/blob/master/assets/Screenshot6.p
 There is a check on the id assigned to each entry to ensure that there is no duplicate despite the random addition and deletion of note entries. 
 
 ## Credits
-I had guidance from Sandesh and Dhani (https://github.com/pozengineer).
+I had guidance from Sandesh and Harshpreet and Dhani (https://github.com/pozengineer).
 
