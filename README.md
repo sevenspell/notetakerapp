@@ -14,7 +14,6 @@ Users can also choose to delete if they no longer want the note. Users can add a
 + Express
 + Path
 + FS
-+ MySQL
 
 
 ## Usage 
