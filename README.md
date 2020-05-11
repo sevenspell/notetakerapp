@@ -1,6 +1,6 @@
 # week11-assignment Express Homework: Note Taker
 
-+ Github Repo link: https://github.com/sevenspell/week11-assignment
++ Github Repo link: https://github.com/sevenspell/notetakerapp
 
  + Heroku Deployed App link: https://sevenspellnotetaker.herokuapp.com/
 
